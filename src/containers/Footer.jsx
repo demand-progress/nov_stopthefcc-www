@@ -14,7 +14,7 @@ class Footer extends Component {
     componentDidMount(){
         axios({
             method: "get",
-            url: 'https://api.tipe.io/api/v1/document/5afb470430f8070013b794a6',
+            url: 'https://api.tipe.io/api/v1/document/5bec770936d58100136e41bb',
             headers: {
               'Content-Type': 'application/json',
               'Authorization': 'DC37ZIL72X4BNJ6A3SPO6KF5N',
