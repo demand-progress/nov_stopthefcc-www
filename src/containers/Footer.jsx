@@ -33,31 +33,60 @@ class Footer extends Component {
     
     render(){
         let logos = null
+        let logosText = []
         let tweet = "https://twitter.com/intent/tweet?text="+this.props.tweet
 
         if(this.state.allLogos){
+           
            let orderedLogos = this.state.allLogos.sort(function(a, b) {
-                return (a.name < b.name) ? -1 : (a.name > b.name) ? 1 : 0;
+               const firstLogoName = a.name.toLowerCase();
+               const secondLogoName = b.name.toLowerCase();
+                if (/\d/.test(firstLogoName)){
+                    return -1 
+                } else if(/\d/.test(secondLogoName)){
+                    return 1
+                } else {
+                    return (firstLogoName < secondLogoName) ? -1 : (firstLogoName > secondLogoName) ? 1 : 0;
+                }     
             })
             
             logos = orderedLogos.map(({ key, name, value}) => {
               return <Logo key={value.key} alt={name} src={value.url}/>
                 }   
             )
+
+            this.state.allLogos.forEach((logo) => {
+                if(/\d/.test(logo.name)){
+                    name = logo.name.substring(1)
+                    logosText.push(name)
+                } else {
+                    logosText.push(logo.name)
+                }
+            })
         }
-       
+        
         return (
             <div id="footer">
                 <div className="footer">
                     <div className="logos-unit">
                         <div className="built-by">
-                            <p><br/><br/>Built by:</p> <img src="images/demand-progress.png" />
-                            <p>In partnership with: </p> <img src="images/DailyKosLogo.png" />
+                            <p><br/><br/>Built by:</p> <img src={this.state.dpLogoUrl} />
+                            {/* <p>In partnership with: </p> <img src="images/DailyKosLogo.png" /> */}
                         </div>
                         <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center"}}>
                             {logos}
                         </div>
-                        <div>
+                        <div className="media-press-social">
+                            <div className="social-media">
+                                <a className="twitter" href={tweet} target="_blank">
+                                    <img src="images/twitter_white.svg" />
+                                    <span>Share on twitter</span>
+                                </a>
+                                <a className="facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fstopthewar.us%2Ffb%3Fsource%3Dfbshare" target="_blank">
+                                    <img src="images/facebook_white.svg" />
+                                    <span>Share on facebook</span>
+                                </a>
+                            </div> 
                             <div className="press-inquiries">
                                 <h3>For Press inquiries, please contact us at:</h3>
                                 <p>
@@ -68,18 +97,9 @@ class Footer extends Component {
                                 <p>
                                     <a href="https://demandprogress.org/privacy-policy/" target="_blank">Our privacy policy</a>
                                 </p>
-                            </div>
-                            <div className="social-media">
-                                <a className="twitter" href={tweet} target="_blank">
-                                    <img src="images/twitter_white.svg" />
-                                    <span>Share on twitter</span>
-                                </a>
-                                <a className="facebook" href="https://www.facebook.com/sharer.php?u=https://www.stopthefcc.net/" target="_blank">
-                                    <img src="images/facebook_white.svg" />
-                                    <span>Share on facebook</span>
-                                </a>
-                            </div>
+                            </div>        
                         </div>
+                        <div className="orgs">{logosText.join(', ')}</div>
                     </div>
                 </div>
             </div>);
