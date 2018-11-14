@@ -41,18 +41,13 @@ class App extends Component {
         })
         .then(response => {
           const { data } = response
+          const textContent = {}
+          data.blocks.map((textObject) => {
+            const { name, value}  = textObject
+            textContent[name] = value
+          })
           this.setState({
-            textContent:{
-              header: data.blocks[0].value,
-              subHeader: data.blocks[1].value,
-              congressLanguage: data.blocks[2].value,
-              main: data.blocks[3].value,
-              disclaimer: data.blocks[4].value,
-              formButton: data.blocks[5].value,
-              modalHeader: data.blocks[6].value,
-              modalText: data.blocks[7].value,
-              tweet: data.blocks[8].value
-            },
+            textContent,
             loading: false
           })
         })
