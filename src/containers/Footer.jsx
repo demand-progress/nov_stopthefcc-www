@@ -36,12 +36,12 @@ class Footer extends Component {
     
     render(){
         let logos = null
-        let logosText = []
+        let logosText = null
         let tweet = "https://twitter.com/intent/tweet?text="+this.props.tweet
 
         if(this.state.allLogos){
-           
            let orderedLogos = this.state.allLogos.sort(function(a, b) {
+               logosText = []
                const firstLogoName = a.name.toLowerCase();
                const secondLogoName = b.name.toLowerCase();
                 if (/\d/.test(firstLogoName)){
@@ -55,7 +55,7 @@ class Footer extends Component {
             
             logos = orderedLogos.map(({ key, name, value}) => {
               return <Logo key={value.key} alt={name} src={value.url}/>
-                }   
+                } 
             )
 
             this.state.allLogos.forEach((logo) => {
@@ -66,6 +66,9 @@ class Footer extends Component {
                     logosText.push(logo.name)
                 }
             })
+            logosText = logosText.join(', ')  
+        } else {
+            logosText = ''+ this.props.swapPartners
         }
 
         return (
@@ -102,7 +105,7 @@ class Footer extends Component {
                                 </p>
                             </div>        
                         </div>
-                        <div className="orgs">{logosText.join(', ')}</div>
+                        <div className="orgs">{logosText}</div>
                     </div>
                 </div>
             </div>);
