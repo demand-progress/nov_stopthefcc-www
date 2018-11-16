@@ -20,7 +20,8 @@ class App extends Component {
                 formButton: null,
                 modalHeader: null,
                 modalText: null,
-                tweet: null
+                tweet: null,
+                swapPartners: null
             },
             loading: true
         }  
@@ -46,6 +47,7 @@ class App extends Component {
             const { name, value}  = textObject
             textContent[name] = value
           })
+
           this.setState({
             textContent,
             loading: false
@@ -65,9 +67,10 @@ class App extends Component {
             formButton, 
             modalHeader, 
             modalText, 
-            tweet 
+            tweet,
+            swapPartners
         } = this.state.textContent
-        
+    
         return(
             <div style={{display: this.state.loading ? 'none': 'block'}}>
                 <Main 
@@ -80,7 +83,7 @@ class App extends Component {
                 modalHeader={ modalHeader }
                 modalText= { modalText }
                 />
-                <Footer tweet= {tweet} />
+                <Footer tweet= {tweet} swapPartners= {swapPartners}/>
             </div>
         )
     }
