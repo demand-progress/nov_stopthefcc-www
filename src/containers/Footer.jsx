@@ -14,7 +14,7 @@ class Footer extends Component {
     componentDidMount(){
         axios({
             method: "get",
-            url: 'https://api.tipe.io/api/v1/document/5bec770936d58100136e41bb',
+            url: 'https://api.tipe.io/api/v1/document/5bef4999ccea83001386cc1e',
             headers: {
               'Content-Type': 'application/json',
               'Authorization': 'DC37ZIL72X4BNJ6A3SPO6KF5N',
@@ -23,6 +23,7 @@ class Footer extends Component {
           })
           .then(response => {
             const logos = response.data.blocks
+            console.log(logos);
             const swapLogos = logos.filter(element => element.apiId !== 'demandProgressAction');
             const dpLogoUrl = logos.filter(element => element.apiId === 'demandProgressAction')[0].value.url;
             this.setState({
@@ -40,8 +41,8 @@ class Footer extends Component {
         let tweet = "https://twitter.com/intent/tweet?text="+this.props.tweet
 
         if(this.state.allLogos){
+            logosText = []
            let orderedLogos = this.state.allLogos.sort(function(a, b) {
-               logosText = []
                const firstLogoName = a.name.toLowerCase();
                const secondLogoName = b.name.toLowerCase();
                 if (/\d/.test(firstLogoName)){
