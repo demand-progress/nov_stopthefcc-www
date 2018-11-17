@@ -246,7 +246,6 @@ class Form extends Component {
           const phone = form.company_phone
           if(phone.value.trim() && phone.value.trim().length < 10 || /[a-z]/i.test(phone.value)|| phone.value.trim().length > 14){
             phone.focus();
-            console.log(phone.value.trim().length)
             alert('Please enter a valid Phone number.');
             return;
           } else {
