@@ -355,7 +355,7 @@ template {
 
 .bftn-homepage .hero .call-action-form h3 {
   font-size: 41px;
-  margin-bottom: 0;
+  margin: 30px auto;
 }
 
 .bftn-homepage .hero .call-action-form p {
@@ -1135,6 +1135,7 @@ color: #272F32;
 
   .bftn-homepage .hero .call-action-form h3 {
       font-size: 40px;
+      margin: 0; 
   }
 
   #spinner {
@@ -1431,6 +1432,7 @@ color: #272F32;
 
   .bftn-homepage .hero .call-action-form h3 {
       font-size: 36px;
+      margin: 0px;
   }
 
   div.modal-thanks-text p:nth-of-type(3) a{
@@ -1483,6 +1485,7 @@ color: #272F32;
 
   .bftn-homepage .hero .call-action-form h3 {
       font-size: 24px;
+      margin: 0px;
   }
 
   #share-button-container {
@@ -1553,12 +1556,14 @@ color: #272F32;
 
   .bftn-homepage .hero .call-action-form h3 {
       font-size: 29px;
+      margin: 0px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .bftn-homepage .hero .call-action-form h3 {
       font-size: 28px;
+      margin: 0px;
   }
 
   .orgs {
