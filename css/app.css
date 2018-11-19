@@ -1112,6 +1112,7 @@ color: #272F32;
   color: #CCCAEA;
   height: 100%;
   width: 100%; 
+  margin-top: 60px;
 }
 
 .media-press-social {
@@ -1372,6 +1373,10 @@ color: #272F32;
     flex-direction: column-reverse; 
   }
 
+  .bftn-homepage .hero .call-action-form h3:nth-of-type(2) {
+    margin-top: 0px;
+  }
+
 }
 @media screen and (max-width: 700px) {
   #share-button-container{
@@ -1568,9 +1573,5 @@ color: #272F32;
   .bftn-homepage .hero .call-action-form h3 {
       font-size: 28px;
       margin: 0px;
-  }
-
-  .orgs {
-    padding-top: 55px;
   }
 }
