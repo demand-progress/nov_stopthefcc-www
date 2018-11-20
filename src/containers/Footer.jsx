@@ -40,10 +40,18 @@ class Footer extends Component {
         let tweet = "https://twitter.com/intent/tweet?text="+this.props.tweet
 
         if(this.state.allLogos){
-            logosText = []
+            logosText = ['Demand Progress']
            let orderedLogos = this.state.allLogos.sort(function(a, b) {
-               const firstLogoName = a.name.toLowerCase();
-               const secondLogoName = b.name.toLowerCase();
+               let firstLogoName = a.name.toLowerCase();
+               let secondLogoName = b.name.toLowerCase();
+                if(firstLogoName.indexOf('the ') === 0) {
+                    firstLogoName =  firstLogoName.substring(4);
+                }
+
+                if(secondLogoName.indexOf('the ') === 0){
+                    secondLogoName = secondLogoName.substring(4);
+                }
+
                 if (/\d/.test(firstLogoName)){
                     return -1 
                 } else if(/\d/.test(secondLogoName)){
