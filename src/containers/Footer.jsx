@@ -25,9 +25,16 @@ class Footer extends Component {
             const logos = response.data.blocks
             const swapLogos = logos.filter(element => element.apiId !== 'demandProgressAction');
             const dpLogoUrl = logos.filter(element => element.apiId === 'demandProgressAction')[0].value.url;
+            
             this.setState({
               allLogos: swapLogos,
               dpLogoUrl
+            }, () => {
+                const {allLogos} = this.state; 
+                    for (var i = 0; i < allLogos.length; i++) {
+                        const img = new Image();
+                        img.src = allLogos[i].value.url;
+                    }
             })
           })
           .catch(console.error);
