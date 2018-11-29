@@ -37,11 +37,10 @@ class Footer extends Component {
     
     render(){
         let logos = null
-        let logosText = null
-        let tweet = "https://twitter.com/intent/tweet?text="+this.props.tweet
+        let logosText = "Demand Progress, American Family Voices, CA Clean Money Action Fund, California League of Conservation Voters, Center For Media Justice, Climate Hawks Vote, Color Of Change, Common Cause, Common Dreams, CPD Action, Daily Kos, Democracy for America, Free Press Action Fund, Friends of the Earth Action, The Nation, OpenMedia, People For The American Way, Presente Action, Progress America, RootsAction, SumOfUs, Watchdog.net, The Zero Hour"
+        let tweet = "https://twitter.com/intent/tweet?text=Tell%20your%20representative%20to%20stand%20for%20real%20%23NetNeutrality%20by%20supporting%20the%20Congressional%20Review%20Act%20resolution%20to%20save%20the%20open%20internet.%20Call%20Congress%20TODAY%3A%20https%3A%2F%2Fstopthefcc.net%2F%20"
 
         if(this.state.allLogos){
-            logosText = ['Demand Progress']
            let orderedLogos = this.state.allLogos.sort(function(a, b) {
                let firstLogoName = a.name.toLowerCase();
                let secondLogoName = b.name.toLowerCase();
@@ -66,18 +65,6 @@ class Footer extends Component {
               return <Logo key={value.key} alt={name} src={value.url}/>
                 } 
             )
-
-            this.state.allLogos.forEach((logo) => {
-                if(/\d/.test(logo.name)){
-                    name = logo.name.substring(1)
-                    logosText.push(name)
-                } else {
-                    logosText.push(logo.name)
-                }
-            })
-            logosText = logosText.join(', ')  
-        } else {
-            logosText = ''+ this.props.swapPartners
         }
 
         return (
@@ -86,7 +73,6 @@ class Footer extends Component {
                     <div className="logos-unit">
                         <div className="built-by">
                             <p><br/><br/>Built by:</p> <img src={this.state.dpLogoUrl} />
-                            {/* <p>In partnership with: </p> <img src="images/DailyKosLogo.png" /> */}
                         </div>
                         <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center"}}>
                             {logos}
