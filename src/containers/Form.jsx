@@ -89,10 +89,18 @@ class Form extends Component {
               <div className="modal-thanks">
                 <a className="close-thanks" href="#" onClick={ this.closeModal }>×</a>
                 <header>
-                  <h2 id="modal-header-thanks">{this.props.modalHeader}</h2>
+                  <h2 id="modal-header-thanks">Thanks for signing.</h2>
                 </header>
                 <article>
-                <Markdown className="modal-thanks-text" source= {this.props.modalText} />
+                <div className="modal-thanks-text">
+                  <p>Please call Congress and tell your lawmakers to overturn the FCC and restore net neutrality:</p>
+                  <h3>Call Now:</h3>
+                  <h3><a href="tel:8582640403">858-264-0403</a></h3>
+                  <p>We’ll connect you to your lawmakers.  You can use this script — just introduce yourself, be polite, and say:</p>
+                  <p><em>"I support Title Two net neutrality and I urge you to sign the discharge petition and vote for the Congressional Review Act ‘resolution of disapproval’ to restore net neutrality."</em></p>
+                  <p>Finally, visit <a href="https://www.deadlinefornetneutrality.com/?step=2&amp;from=stopfcc">DeadlineForNetNeutrality.com</a> and join thousands of others by using an awesome selfie tool to upload a photo in support of the open internet. We want lawmakers who are still on the fence to see the faces of net neutrality supporters!</p>
+                  </div>
+                  <a href="https://www.deadlinefornetneutrality.com/?step=2&from=stopfcc"><img src="https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/a8e7719d-196f-4f23-a5f8-552f1659e2fe/photo-grid-example.jpg"/></a>
                 </article>
               </div>
             </div>
