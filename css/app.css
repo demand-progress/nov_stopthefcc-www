@@ -1126,6 +1126,10 @@ color: #272F32;
   margin-top: -20px;
 }
 
+#thanks > div > article > div > p:nth-child(6){
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 930px) {
   .bftn-homepage .hero {
       margin-bottom: 20px;
