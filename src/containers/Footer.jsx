@@ -29,12 +29,6 @@ class Footer extends Component {
             this.setState({
               allLogos: swapLogos,
               dpLogoUrl
-            }, () => {
-                const {allLogos} = this.state; 
-                    for (var i = 0; i < allLogos.length; i++) {
-                        const img = new Image();
-                        img.src = allLogos[i].value.url;
-                    }
             })
           })
           .catch(console.error);
