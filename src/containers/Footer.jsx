@@ -34,12 +34,12 @@ class  Footer extends  Component {
         }
 
         componentDidMount(){
-            const {orderedLogos} = this.state; 
-            for (var i = 0; i < orderedLogos.length; i++) {
-                const img = new Image();
-                img.src = orderedLogos[i].url;
-                console.log(img);
-            }
+            // const {orderedLogos} = this.state; 
+            // for (var i = 0; i < orderedLogos.length; i++) {
+            //     const img = new Image();
+            //     img.src = orderedLogos[i].url;
+            //     console.log(img);
+            // }
         }
 
    
