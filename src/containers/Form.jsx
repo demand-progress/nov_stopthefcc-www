@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { CONF, URLS } from '../config';
 import { getQueryVariables } from '../utils';
-import Markdown from 'react-markdown'
 import Responsive from 'react-responsive-decorator';
 
 
@@ -48,8 +47,10 @@ class Form extends Component {
       let middle = null; 
 
       const subHeader = (
-        <div id="subHeader">          
-          <Markdown source={this.props.subHeader} />
+        <div id="subHeader">
+          <div>
+            <p><strong>The FCC gutted net neutrality and gave Big Cable the power to control the internet. But after millions of people spoke out, the Senate voted to overturn the agency's repeal. Now the House of Representatives can do the same by passing a special resolution — but they must act before the end of 2018. Contact your reps to demand net neutrality!</strong></p>
+          </div>
         </div>
       )
 
@@ -66,11 +67,11 @@ class Form extends Component {
         </div>       
         <div className="flex" style={{marginTop: '25px'}}>
           <button className="btn">
-            <span>{this.props.formButton}</span>
+            <span>SIGN NOW</span>
           </button>
         </div>
       </form>
-      <span><i>{this.props.disclaimer}</i></span>
+      <span><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span>
       <br/><br/>
       </div>
       )
@@ -109,10 +110,12 @@ class Form extends Component {
       
       return (
         <div className="bftn-form call-action-form" onSubmit={ this.onSubmit }>
-          <Markdown source={this.props.header} />
-            {topOfPage}
-            {middle}
-            {modal}
+          <div>
+            <h3>Time is Running Out. Tell Congress:</h3><h3>Restore Net Neutrality Now!</h3>
+          </div>
+          {topOfPage}
+          {middle}
+          {modal}
           </div>
       );
     }
