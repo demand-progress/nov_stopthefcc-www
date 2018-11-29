@@ -1,13 +1,13 @@
-import React  from 'react'
+import React, {Component}  from 'react'
 import Logo from './Logo.jsx'
+import { renderers } from 'react-markdown';
 
-const  Footer = () => {
-    
-        let logos = null
-        let logosText = "Demand Progress, American Family Voices, CA Clean Money Action Fund, California League of Conservation Voters, Center For Media Justice, Climate Hawks Vote, Color Of Change, Common Cause, Common Dreams, CPD Action, Daily Kos, Democracy for America, Free Press Action Fund, Friends of the Earth Action, The Nation, OpenMedia, People For The American Way, Presente Action, Progress America, RootsAction, SumOfUs, Watchdog.net, The Zero Hour"
-        let tweet = "https://twitter.com/intent/tweet?text=Tell%20your%20representative%20to%20stand%20for%20real%20%23NetNeutrality%20by%20supporting%20the%20Congressional%20Review%20Act%20resolution%20to%20save%20the%20open%20internet.%20Call%20Congress%20TODAY%3A%20https%3A%2F%2Fstopthefcc.net%2F%20"
+class  Footer extends  Component {
+        constructor(props){
+            super(props)
 
-        const orderedLogos = [{name: "American Family Voices", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/383c42bf-7f92-4e72-8c00-38b9f9c60ee4/PasAFV.jpg"},
+            this.state = {
+                orderedLogos: [{name: "American Family Voices", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/383c42bf-7f92-4e72-8c00-38b9f9c60ee4/PasAFV.jpg"},
         {name: "CA Clean Money Action Fund", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/41fa8bce-c0c2-4b86-a9bd-5dc9c0d3cec8/CCMAF Logo.png"},
         {name: "California League of Conservation Voters", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/7b85ae3c-aed0-4941-a6b4-563ecaa87693/clcvlogo_colorhires_big.jpg"},
         {name: "Center For Media Justice", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/f8807302-595b-480c-b0eb-a44453606a1d/CMJ logo hi-res.jpg"},
@@ -29,11 +29,20 @@ const  Footer = () => {
         {name: "SumOfUs", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/419f8264-2545-4ec1-bad8-6b888b543d46/SumOfUs_lg_color copy.png"},
         {name: "Watchdog.net", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/1f78005d-52c9-47c8-80b9-bd6734fd5fde/watchdog_small.png"},
         {name: "The Zero Hour", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/587568a2-4166-4715-84b7-74dab42bf9c0/TZH Logo.jpg"}]
-        
-        logos = orderedLogos.map(({name, url}) => {
-            return <Logo key={name} alt={name} src={url}/>
-              } 
-          )
+
+            }
+        }
+
+        componentDidMount(){
+            const {orderedLogos} = this.state; 
+            for (var i = 0; i < orderedLogos.length; i++) {
+                const img = new Image();
+                img.src = orderedLogos[i].url;
+                console.log(img);
+            }
+        }
+
+   
         // if(this.state.allLogos){
         //    let orderedLogos = this.state.allLogos.sort(function(a, b) {
         //        let firstLogoName = a.name.toLowerCase();
@@ -57,44 +66,56 @@ const  Footer = () => {
             
           
         // }
+        
 
-        return (
-            <div id="footer">
-                <div className="footer">
-                    <div className="logos-unit">
-                        <div className="built-by">
-                            <p><br/><br/>Built by:</p> <img src="https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/ffb2acc8-9b36-40ef-bb9a-deb6ecb5ee55/demand-progress.png"/>
+        render(){
+            let logos = null
+            let logosText = "Demand Progress, American Family Voices, CA Clean Money Action Fund, California League of Conservation Voters, Center For Media Justice, Climate Hawks Vote, Color Of Change, Common Cause, Common Dreams, CPD Action, Daily Kos, Democracy for America, Free Press Action Fund, Friends of the Earth Action, The Nation, OpenMedia, People For The American Way, Presente Action, Progress America, RootsAction, SumOfUs, Watchdog.net, The Zero Hour"
+            let tweet = "https://twitter.com/intent/tweet?text=Tell%20your%20representative%20to%20stand%20for%20real%20%23NetNeutrality%20by%20supporting%20the%20Congressional%20Review%20Act%20resolution%20to%20save%20the%20open%20internet.%20Call%20Congress%20TODAY%3A%20https%3A%2F%2Fstopthefcc.net%2F%20"
+            
+            logos = this.state.orderedLogos.map(({name, url}) => {
+                return <Logo key={name} alt={name} src={url}/>
+                  } 
+              )
+            return (
+                <div id="footer">
+                    <div className="footer">
+                        <div className="logos-unit">
+                            <div className="built-by">
+                                <p><br/><br/>Built by:</p> <img src="https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/ffb2acc8-9b36-40ef-bb9a-deb6ecb5ee55/demand-progress.png"/>
+                            </div>
+                            <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center"}}>
+                                {logos}
+                            </div>
+                            <div className="media-press-social">
+                                <div className="social-media">
+                                    <a className="twitter" href={tweet} target="_blank">
+                                        <img src="images/twitter_white.svg" />
+                                        <span>Share on twitter</span>
+                                    </a>
+                                    <a className="facebook" href="https://www.facebook.com/sharer.php?u=https://www.stopthefcc.net/" target="_blank">
+                                        <img src="images/facebook_white.svg" />
+                                        <span>Share on facebook</span>
+                                    </a>
+                                </div> 
+                                <div className="press-inquiries">
+                                    <h3>For Press inquiries, please contact us at:</h3>
+                                    <p>
+                                        <a className="no-em" href="tel:1-202-681-7582">202-681-7582</a> or <a href="mailto:press@demandprogress.org">press@demandprogress.org</a>
+                                    </p>
+    
+                                    <br/>
+                                    <p>
+                                        <a href="https://demandprogress.org/privacy-policy/" target="_blank">Our privacy policy</a>
+                                    </p>
+                                </div>        
+                            </div>
+                            <div className="orgs">{logosText}</div>
                         </div>
-                        <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center"}}>
-                            {logos}
-                        </div>
-                        <div className="media-press-social">
-                            <div className="social-media">
-                                <a className="twitter" href={tweet} target="_blank">
-                                    <img src="images/twitter_white.svg" />
-                                    <span>Share on twitter</span>
-                                </a>
-                                <a className="facebook" href="https://www.facebook.com/sharer.php?u=https://www.stopthefcc.net/" target="_blank">
-                                    <img src="images/facebook_white.svg" />
-                                    <span>Share on facebook</span>
-                                </a>
-                            </div> 
-                            <div className="press-inquiries">
-                                <h3>For Press inquiries, please contact us at:</h3>
-                                <p>
-                                    <a className="no-em" href="tel:1-202-681-7582">202-681-7582</a> or <a href="mailto:press@demandprogress.org">press@demandprogress.org</a>
-                                </p>
-
-                                <br/>
-                                <p>
-                                    <a href="https://demandprogress.org/privacy-policy/" target="_blank">Our privacy policy</a>
-                                </p>
-                            </div>        
-                        </div>
-                        <div className="orgs">{logosText}</div>
                     </div>
-                </div>
-            </div>);
+                </div>);
+        }
+        
     }
 
 export default Footer;
