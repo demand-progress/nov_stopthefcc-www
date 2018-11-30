@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Form from './Form.jsx';
-import Markdown, { renderers } from 'react-markdown';
 import VisibilitySensor from 'react-visibility-sensor';
 
 class Main extends Component {
