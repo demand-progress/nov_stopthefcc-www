@@ -1122,10 +1122,6 @@ color: #272F32;
   justify-content: space-between;
 }
 
-.bftn-homepage .hero .call-action-form h3:nth-of-type(2) {
-  margin-top: -20px;
-}
-
 #thanks > div > article > div > p:nth-child(6){
   margin-top: 12px;
 }
@@ -1141,6 +1137,7 @@ color: #272F32;
 
 
 @media screen and (max-width: 930px) {
+
   .bftn-homepage .hero {
       margin-bottom: 20px;
   }
@@ -1150,13 +1147,9 @@ color: #272F32;
       margin: 0px auto;
   }
 
-  .bftn-homepage button.btn, .bftn-homepage a.btn {
-      width: 50%;
-  }
-
   .bftn-homepage .hero .call-action-form h3 {
-      font-size: 40px;
-      margin: 0; 
+    font-size: 34px;
+    margin: 20px;
   }
 
   #spinner {
@@ -1394,11 +1387,28 @@ color: #272F32;
   }
 
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 790px) {
   #share-button-container{
       width: 92%;
   }
+  .bftn-homepage .hero .call-action-form h3 {
+   font-size: 34px;
+   margin: 15px;
+  }
 }
+
+@media screen and (max-width: 777px) {
+  .bftn-homepage .hero .call-action-form h3 {
+   font-size: 31px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .bftn-homepage .hero .call-action-form h3 {
+   font-size: 30px;
+  }
+}
+
 
 @media screen and (max-width: 600px) {
   .bftn-homepage #leaderboard .leaderboard-day {
@@ -1512,7 +1522,7 @@ color: #272F32;
   }
 
   .bftn-homepage .hero .call-action-form h3 {
-      font-size: 24px;
+      font-size: 31px;
       margin: 0px;
   }
 
