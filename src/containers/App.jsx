@@ -38,7 +38,7 @@ class App extends Component  {
     render(){
         return(
             <div>
-                <Main logoCheck={this.logoCheck}/>
+                <Main logoCheck={this.logoCheck} isMobile={this.state.isMobile}/>
                 <Footer showLogos={this.state.showLogos} isMobile={this.state.isMobile}/>
             </div>
         )
