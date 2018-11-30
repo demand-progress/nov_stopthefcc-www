@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { CONF, URLS } from '../config';
 import { getQueryVariables } from '../utils';
-import Responsive from 'react-responsive-decorator';
-
 
 class Form extends Component {
 
@@ -11,7 +9,6 @@ class Form extends Component {
         this.state = getQueryVariables()
         this.state.submitted = false
         this.state.countDown = 5
-        this.state.isMobile = false
         this.onSubmit = this.onSubmit.bind(this)
         this.closeModal = this.closeModal.bind(this)
     }
@@ -28,17 +25,6 @@ class Form extends Component {
       //     includeBusinessBox: includeBusinessBox
       //   })
       // }
-    
-      this.props.media({ minWidth: 768 }, () => {
-        this.setState({
-          isMobile: false
-        })
-      })
-      this.props.media({ maxWidth: 768 }, () => {
-        this.setState({
-          isMobile: true
-        })
-      })
     }
 
     render() {
@@ -75,8 +61,8 @@ class Form extends Component {
       <br/><br/>
       </div>
       )
-
-      if(this.state.isMobile){
+  
+      if(this.props.isMobile){
         topOfPage = form
         middle = subHeader
         } else {
@@ -226,4 +212,4 @@ class Form extends Component {
 
 }
 
-export default Responsive(Form);
+export default Form;
