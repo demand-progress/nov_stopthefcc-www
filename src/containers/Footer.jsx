@@ -1,7 +1,5 @@
 import React, {Component}  from 'react'
 import Logo from './Logo.jsx'
-import { renderers } from 'react-markdown';
-
 
 class  Footer extends  Component {
         constructor(props){
