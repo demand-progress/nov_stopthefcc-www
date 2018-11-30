@@ -16,7 +16,7 @@ class Main extends Component {
                 <div className="hero" id="bftn-action-form">
                     <div>
                         <div id="signThePetition">
-                            <Form />
+                            <Form isMobile={this.props.isMobile}/>
                         </div>
                     </div>
                     <div className="unit" >
