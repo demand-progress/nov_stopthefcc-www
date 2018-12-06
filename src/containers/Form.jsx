@@ -95,10 +95,7 @@ class Form extends Component {
       }
       
       return (
-        <div className="bftn-form call-action-form" onSubmit={ this.onSubmit }>
-          <div>
-            <h3>Time is Running Out. Tell Congress:</h3><h3>Restore Net Neutrality Now!</h3>
-          </div>
+        <div onSubmit={ this.onSubmit }>
           {topOfPage}
           {middle}
           {modal}
