@@ -35,7 +35,7 @@ class Form extends Component {
       const subHeader = (
         <div id="subHeader">
           <div>
-            <p><strong>The FCC gutted net neutrality and gave Big Cable the power to control the internet. But after millions of people spoke out, the Senate voted to overturn the agency's repeal. Now the House of Representatives can do the same by passing a special resolution — but they must act before the end of 2018. Contact your reps to demand net neutrality!</strong></p>
+            <p><strong>The FCC gutted net neutrality and gave Big Cable the power to control the internet. Millions have spoken out, and now the Save the Internet Act is being introduced in the House and Senate to fully restore protections. Contact your lawmakers to demand they support legislation to restore net neutrality!</strong></p>
           </div>
         </div>
       )

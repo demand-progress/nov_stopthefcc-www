@@ -18,7 +18,7 @@ class Main extends Component {
                         <div id="signThePetition">
                             <div className="bftn-form call-action-form">
                                 <div>
-                                    <h3>Time is Running Out. Tell Congress:</h3><h3>Restore Net Neutrality Now!</h3>
+                                    <h3>Tell Congress:</h3><h3>Support the 'Save the Internet Act' to Restore Net Neutrality!</h3>
                                 </div>
                                 <Form isMobile={this.props.isMobile}/>
                             </div>
@@ -28,7 +28,7 @@ class Main extends Component {
                         <div id="congress">
                             <div>
                                 <h4>Here's the language that will be sent to Congress:</h4>
-                                <p><em>"The FCC's vote to destroy net neutrality protections cannot stand. Please co-sponsor, sign the discharge petition for, and vote for the Congressional Review Act resolution to overturn the FCC's repeal of net neutrality."</em></p>
+                                <p><em>"The FCC's vote to destroy net neutrality protections cannot stand. Please co-sponsor and vote for the Save the Internet Act to fully restore the open internet protections repealed by the FCC."</em></p>
                                 <p><em>“The FCC's decision willfully ignored the outcry of tens of millions of people, and it abdicated the FCC's responsibility to protect the internet from ISP blocking and discrimination. Please overturn it to restore net neutrality and ensure that the internet continues to enable speech, commerce, and democracy."</em></p>
                             </div>
                         </div>
@@ -36,13 +36,17 @@ class Main extends Component {
                         <div style={{color: 'white'}}>
                             <div>
                             <VisibilitySensor onChange={this.props.logoCheck}>
-                                <h4>The House of Representatives has a golden opportunity to save net neutrality in 2018 by passing the Congressional Review Act resolution to overturn the FCC — or face an uphill battle in 2019.</h4>
+                                <h4>Congress can restore net neutrality by passing the Save the Internet Act.</h4>
                             </VisibilitySensor>   
-                                <p>A year ago, Trump FCC Chairman Ajit Pai—a former top lawyer for Verizon—pushed through a measure to end net neutrality and let Big Cable companies control which websites and apps you use, where you get your news, how you listen to music and watch videos — everything you do on the internet.</p>
-                                <p>Then, thanks to grassroots pressure—and flying in the face of what many Beltway pundits said was possible—the Senate took a historic vote in May to overturn the FCC’s disastrous decision. Despite the attempts of Big Cable’s army of lobbyists to turn net neutrality into a partisan issue, lawmakers from both parties opted to stand with their constituents over Comcast.</p>
-                                <p>Now the Congressional Review Act resolution to overturn the FCC has moved to the House, where we need a simple majority of representatives, or 218, to sign a discharge petition to force the resolution to a floor vote and then pass it. Because of procedural rules, we must get this done before the end of 2018, or we have to start over in the next Congress. Right now, the resolution has the support of 177 representatives in the House — it’s crucial we get as many remaining members as possible to sign.</p>
-                                <p><a href="#signThePetition">Sign the petition and call on Congress to pass the CRA resolution to stop the repeal of net neutrality before it’s too late.</a></p>
-                                <p>Polls show 86% of Americans oppose the FCC's move to end net neutrality. Net neutrality is vital to free speech, small business, and communities that might not otherwise have a voice in the mainstream media. The only ones who benefit from the repeal of net neutrality are Big Cable executives and the lobbyists they employ. There’s NO EXCUSE —  every lawmaker, both Republican or Democrat, must support net neutrality.</p>
+                                <p>Just over a year ago, Trump FCC Chairman Ajit Pai—a former top lawyer for Verizon—pushed through a measure to end net neutrality and let Big Cable companies control which websites and apps you’re able to use. The repeal went into effect last summer, and the consequences are already becoming apparent, from Verizon <a href="https://www.nbcnews.com/think/opinion/verizon-couldn-t-have-restricted-santa-clara-county-s-phone-ncna903531">throttling California firefighters’ so-called ‘unlimited’ data service during a wildfire</a>, to <a href="https://www.bloomberg.com/news/articles/2018-11-08/sprint-is-throttling-microsoft-s-skype-service-study-finds" target="_blank">reports emerging of video streaming services like Netflix and YouTube being throttled</a>.
+</p>
+                                <p>But thanks to tireless grassroots pressure, legislation called the ‘Save the Internet Act’ is now being introduced in both the House and the Senate to fully restore open internet protections. 
+Activists have kept this issue alive and have refused, flat out, to give Big Cable lobbyists an easy win.
+</p>
+                                <p>Going forward, it’s going to be a knock-down fight to get this legislation through Congress, especially as well-funded Big Cable lobbyists swarm Capitol Hill in opposition — but the open internet movement has a knack for achieving big things. Now’s the time to keep pressure on every lawmaker in DC and demand they stand with their constituents by supporting this legislation and rejecting industry-backed bills that would weaken protections.
+</p>
+                                <p><a href="#signThePetition">Sign the petition and call on Congress to pass legislation to fully restore net neutrality!</a></p>
+                                <p>Polls show 86% of Americans oppose the FCC's move to end net neutrality. Open internet protections are vital to free speech, small businesses, rural broadband, and communities that don’t otherwise have a voice in the mainstream media. The only ones who benefit from the repeal of net neutrality are Big Cable executives and the lobbyists they employ. There’s NO EXCUSE — every lawmaker must act to restore strong net neutrality by cosponsoring the Save the Internet Act.</p>
                             </div>
                         </div>
                     </div>
