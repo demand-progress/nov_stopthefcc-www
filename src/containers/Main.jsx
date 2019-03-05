@@ -18,6 +18,7 @@ class Main extends Component {
                         <div id="signThePetition">
                             <div className="bftn-form call-action-form">
                                 <div>
+                                    <h3>Tell Congress:</h3>
                                     <h3>Support the ‘Save the Internet Act’ to Restore Net Neutrality!</h3>
                                 </div>
                                 <Form isMobile={this.props.isMobile}/>
