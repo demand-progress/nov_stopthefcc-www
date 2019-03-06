@@ -35,7 +35,7 @@ class Form extends Component {
       const subHeader = (
         <div id="subHeader">
           <div>
-            <p><strong>The FCC gutted net neutrality and gave Big Cable the power to control the internet. Millions have spoken out, and now the Save the Internet Act is being introduced in the House and Senate to fully restore protections. Contact your lawmakers to demand they support legislation to restore net neutrality!</strong></p>
+            <p><strong>The FCC gutted net neutrality and gave Big Cable the power to control the internet. Millions have spoken out, and now the Save the Internet Act has been introduced in the House and Senate to fully restore protections. Contact your lawmakers to demand they support legislation to restore net neutrality!</strong></p>
           </div>
         </div>
       )
@@ -80,11 +80,11 @@ class Form extends Component {
                 </header>
                 <article>
                 <div className="modal-thanks-text">
-                  <p>Please call Congress and tell your lawmakers to overturn the FCC and restore net neutrality:</p>
+                  <p>Please call Congress and tell your lawmakers to restore net neutrality:</p>
                   <h3>Call Now:</h3>
                   <h3><a href="tel:8582640403">858-264-0403</a></h3>
                   <p>We’ll connect you to your lawmakers.  You can use this script — just introduce yourself, be polite, and say:</p>
-                  <p><em>"I support Title Two net neutrality and I urge you to sign the discharge petition and vote for the Congressional Review Act ‘resolution of disapproval’ to restore net neutrality."</em></p>
+                  <p><em>"I'm calling to ask my lawmakers to co-sponsor the 'Save the Internet Act,' which will help overturn the FCC’s net neutrality repeal. I expect them to support real net neutrality protections, not laws written by cable company lobbyists. Thank you."</em></p>
                   </div>
                 </article>
               </div>
