@@ -11,6 +11,9 @@ class Form extends Component {
         this.state.countDown = 5
         this.onSubmit = this.onSubmit.bind(this)
         this.closeModal = this.closeModal.bind(this)
+
+        this.renderHeaderText = this.renderHeaderText.bind(this);
+        this.renderFormDisclaimer = this.renderFormDisclaimer.bind(this);
     }
 
     componentDidMount(){
@@ -27,15 +30,28 @@ class Form extends Component {
       // }
     }
 
+    renderHeaderText() {
+      const { headerContent } = this.props;
+
+      return headerContent ? headerContent.header_text : ''
+    }
+
+    renderFormDisclaimer() {
+      const { headerContent } = this.props;
+
+      return headerContent ? headerContent.form_disclaimer : ''
+    }
+
     render() {
       let modal = null;
       let topOfPage = null;
       let middle = null; 
-
+      console.log('FORM PROPS', this.props)
       const subHeader = (
         <div id="subHeader">
           <div>
-            <p><strong>The FCC gutted net neutrality and gave Big Cable the power to control the internet. But after millions of people spoke out, the Senate voted to overturn the agency's repeal. Now the House of Representatives can do the same by passing a special resolution — but they must act before the end of 2018. Contact your reps to demand net neutrality!</strong></p>
+            {/* <p><strong>The FCC gutted net neutrality and gave Big Cable the power to control the internet. But after millions of people spoke out, the Senate voted to overturn the agency's repeal. Now the House of Representatives can do the same by passing a special resolution — but they must act before the end of 2018. Contact your reps to demand net neutrality!</strong></p> */}
+            <p><strong>{this.renderHeaderText()}</strong></p>
           </div>
         </div>
       )
@@ -57,7 +73,8 @@ class Form extends Component {
           </button>
         </div>
       </form>
-      <span><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span>
+      {/* <span><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span> */}
+      <span><i>{this.renderFormDisclaimer()}</i></span>
       <br/><br/>
       </div>
       )
