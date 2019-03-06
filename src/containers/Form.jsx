@@ -35,7 +35,7 @@ class Form extends Component {
       const subHeader = (
         <div id="subHeader">
           <div>
-            <p><strong>The FCC gutted net neutrality and gave Big Cable the power to control the internet. Millions have spoken out, and now the Save the Internet Act is being introduced in the House and Senate to fully restore protections. Contact your lawmakers to demand they support legislation to restore net neutrality!</strong></p>
+            <p><strong>The FCC gutted net neutrality and gave Big Cable the power to control the internet. Millions have spoken out, and now the Save the Internet Act has been introduced in the House and Senate to fully restore protections. Contact your lawmakers to demand they support legislation to restore net neutrality!</strong></p>
           </div>
         </div>
       )
