@@ -3,6 +3,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-family: Montserrat, sans-serif;
+  background-color: black;
 }
 
 .logoText {
@@ -196,7 +197,7 @@ template {
 }
 
 .bftn-homepage {
-  background-color: #171629;
+  background-color: #010008e1;
   color: #CCCAEA;
   /* background-image: url("../images/v2-bg-noise.png"); */
   background-repeat: no-repeat;
@@ -206,7 +207,7 @@ template {
 .bftn-homepage h1, .bftn-homepage h2, .bftn-homepage h3 {
   font-family: Montserrat, sans-serif;
   font-weight: bold;
-  background: -webkit-linear-gradient(#fd4935, #fd6d5a);
+  background: -webkit-linear-gradient(#faed37, #f5e831);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #279cff;
@@ -289,7 +290,7 @@ template {
 
 .bftn-homepage .unit hr {
   margin: 60px 0 -5px 0;
-  border: 1px solid #2a284a;
+  border: 1px solid #ebf82c;
 }
 
 .bftn-homepage .unit p {
@@ -428,7 +429,7 @@ template {
 }
 
 .bftn-homepage #footer {
-  background-color: #1f1c35;
+  background-color: #020207d2;
   padding: 0px 30px 0px 30px;
   margin-top: 100px;
 }
@@ -582,7 +583,7 @@ template {
   font-size: 20px;
   border-radius: 4px;
   text-transform: uppercase;
-  background-color: #f94220;
+  background-color: #ff1a09;
   color: #FFF;
   cursor: pointer;
 }
@@ -938,12 +939,12 @@ p.imageHeaders {
 
 #congress h4 {
   font-weight: 700;
-  color: #279cff;
+  color: #ebf82c;
   font-size: 24px;
 }
 
 .bftn-homepage .unit p{
-  color: #cccaea;
+  color: #ffffff;
 }
 
 .bftn-homepage .unit p em {
@@ -1111,7 +1112,7 @@ color: #272F32;
 
 .orgs {
   text-align: center;
-  color: #CCCAEA;
+  color: rgb(255, 255, 255);
   height: 100%;
   width: 100%; 
   margin: 60px 0px 30px 0px;
