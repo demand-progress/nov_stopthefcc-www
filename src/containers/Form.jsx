@@ -57,7 +57,7 @@ class Form extends Component {
           </button>
         </div>
       </form>
-      <span><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span>
+      <span style={{color: 'white'}}><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span>
       <br/><br/>
       </div>
       )
