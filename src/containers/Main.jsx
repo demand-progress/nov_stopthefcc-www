@@ -6,11 +6,25 @@ class Main extends Component {
 
     constructor(props){
         super(props);
+
+        this.renderContent = this.renderContent.bind(this);
+        this.renderHeaderContent = this.renderHeaderContent.bind(this);
+    }
+
+    renderHeaderContent() {
+        const { headerContent } = this.props
+
+        return {__html: headerContent ? headerContent.header_cta : ''}
+    }
+
+    renderContent() {
+        const { content } = this.props
+
+        return {__html: content ? content.rendered : ''}
     }
 
     render(){
         return (
-            
         <div id="app">
             <div className="unit">
                 <div className="hero" id="bftn-action-form">
@@ -18,9 +32,10 @@ class Main extends Component {
                         <div id="signThePetition">
                             <div className="bftn-form call-action-form">
                                 <div>
-                                    <h3>Time is Running Out. Tell Congress:</h3><h3>Restore Net Neutrality Now!</h3>
+                                    {/* <h3>Time is Running Out. Tell Congress:</h3><h3>Restore Net Neutrality Now!</h3> */}
+                                    <h3 dangerouslySetInnerHTML={this.renderHeaderContent()}></h3>
                                 </div>
-                                <Form isMobile={this.props.isMobile}/>
+                                <Form headerContent={this.props.headerContent} isMobile={this.props.isMobile}/>
                             </div>
                         </div>
                     </div>
@@ -34,7 +49,7 @@ class Main extends Component {
                         </div>
                     <hr/>
                         <div style={{color: 'white'}}>
-                            <div>
+                            {/* <div>
                             <VisibilitySensor onChange={this.props.logoCheck}>
                                 <h4>The House of Representatives has a golden opportunity to save net neutrality in 2018 by passing the Congressional Review Act resolution to overturn the FCC — or face an uphill battle in 2019.</h4>
                             </VisibilitySensor>   
@@ -43,7 +58,8 @@ class Main extends Component {
                                 <p>Now the Congressional Review Act resolution to overturn the FCC has moved to the House, where we need a simple majority of representatives, or 218, to sign a discharge petition to force the resolution to a floor vote and then pass it. Because of procedural rules, we must get this done before the end of 2018, or we have to start over in the next Congress. Right now, the resolution has the support of 177 representatives in the House — it’s crucial we get as many remaining members as possible to sign.</p>
                                 <p><a href="#signThePetition">Sign the petition and call on Congress to pass the CRA resolution to stop the repeal of net neutrality before it’s too late.</a></p>
                                 <p>Polls show 86% of Americans oppose the FCC's move to end net neutrality. Net neutrality is vital to free speech, small business, and communities that might not otherwise have a voice in the mainstream media. The only ones who benefit from the repeal of net neutrality are Big Cable executives and the lobbyists they employ. There’s NO EXCUSE —  every lawmaker, both Republican or Democrat, must support net neutrality.</p>
-                            </div>
+                            </div> */}
+                            <div dangerouslySetInnerHTML={this.renderContent()}/>
                         </div>
                     </div>
                 </div>
