@@ -6,15 +6,19 @@ class  Footer extends  Component {
             super(props);
             this.state = {
                 orderedLogos: [
-                    {name: "CA Clean Money Action Fund", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/41fa8bce-c0c2-4b86-a9bd-5dc9c0d3cec8/CCMAF Logo.png"},
+                    {name: "American Family Voices", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/383c42bf-7f92-4e72-8c00-38b9f9c60ee4/PasAFV.jpg"},
+                    {name: "California Clean Money Action Fund", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/41fa8bce-c0c2-4b86-a9bd-5dc9c0d3cec8/CCMAF Logo.png"},
                     {name: "Center For Media Justice", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/f8807302-595b-480c-b0eb-a44453606a1d/CMJ logo hi-res.jpg"},
                     {name: "Climate Hawks Vote", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/afcdfbb2-115e-42e7-94e0-a82f78f50e94/CHV Logo2.jpg"},
                     {name: "Color Of Change", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/285d4ce4-d080-4bc7-baa1-801d7bf38f63/colorofchange.png"},
                     {name: "Common Dreams", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/3dc1959d-db1a-4f84-af44-edda916f14dc/CD_stacked_white.jpg"},
+                    {name: "Common Cause", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/c6c042b0-46d1-451a-8bd4-7b10feed83d3/common-cause.jpg"},
                     {name: "Daily Kos", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/c7679f4c-3ee7-4670-84a5-b0c4f2f2e2dc/DailyKosLogo.png"},
+                    {name: "Democracy for America", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/04755047-18c4-470c-9d1b-521e35e56728/dfa.png"},
                     {name: "Friends of the Earth Action", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/fbaafaa8-32cd-423a-818e-07566dc8d807/FoeAction.png"},
                     {name: "OpenMedia", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/0378fb59-618c-4389-a2ba-3fb1d8562f67/open-media.jpg"},
                     {name: "Other 98%", url: "/images/o98-black-horizontal.png"},
+                    //People Demanding Action
                     {name: "Progress America", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/8e3e64b3-9932-4b4a-8f80-05d56c6510f7/progress-america.png"},
                     {name: "Public Citizen", url: "/images/publiccitizen.jpg"},
                     {name: "RootsAction", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/e596fb0d-df61-44c7-82c3-20ea65ad5052/RootsAction.png"},
@@ -73,7 +77,7 @@ class  Footer extends  Component {
             
             if(this.props.showLogos || !this.props.isMobile){
                     logos = this.state.orderedLogos.map(({name, url}) => {
-                        logosText += name + ',';
+                        logosText += name + ', ';
                         return <Logo key={name} alt={name} src={url}/>
                         } 
                     )
