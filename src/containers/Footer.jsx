@@ -36,7 +36,7 @@ class  Footer extends  Component {
         render(){
            
             let logos = null
-            let logosText = ""
+            let logosText = "Demand Progress, Daily Kos, "
             let tweet = "https://twitter.com/intent/tweet?text=It%27s%20time%20for%20Congress%20to%20pass%20the%20%23SavetheNet%20Act%2C%20which%20will%20restore%20strong%20%23NetNeutrality%20protections%20supported%20by%20an%20overwhelming%20majority%20of%20Americans.%20Tell%20your%20lawmakers%20to%20stand%20with%20their%20constituents%2C%20not%20Big%20Cable%2C%20by%20backing%20this%20bill%3A%20https%3A%2F%2Fstopthefcc.net%2F"
             
             if(this.props.showLogos || !this.props.isMobile){
@@ -78,7 +78,7 @@ class  Footer extends  Component {
                                     <p>
                                         <a href="https://demandprogress.org/privacy-policy/" target="_blank">Our privacy policy</a>
                                     </p>
-                                </div>        
+                                </div>
                             </div>
                             <div className="orgs">{logosText.substring(0, logosText.length-2)}</div>
                         </div>
