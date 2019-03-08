@@ -7,21 +7,44 @@ class Main extends Component {
     constructor(props){
         super(props);
 
-        this.renderContent = this.renderContent.bind(this);
-        this.renderHeaderContent = this.renderHeaderContent.bind(this);
+        this.renderMainContent = this.renderMainContent.bind(this);
+        this.petitionHeader = this.petitionHeader.bind(this);
+        this.subContentBody = this.subContentBody.bind(this);    
+        this.subContentHeader = this.subContentHeader.bind(this);
     }
 
-    renderHeaderContent() {
-        const { headerContent } = this.props
-
-        return {__html: headerContent ? headerContent.header_cta : ''}
-    }
-
-    renderContent() {
+    petitionHeader() {
         const { content } = this.props
 
-        return {__html: content ? content.rendered : ''}
+        let petition = content.header_cta.split(':')
+        petition[0] += ':'
+        petition = petition.join('<br />')
+
+        return <h3 dangerouslySetInnerHTML={{__html: petition}}></h3>
     }
+
+
+    renderMainContent() {
+        const { main } = this.props
+
+        return {__html: main ? main.rendered : ''}
+    }
+
+    subContentHeader() {
+        const { content } = this.props;
+
+        return {__html: content ? content.sub_content_header : ''}
+    }
+
+    subContentBody() {
+        const { content } = this.props;
+            return content.sub_content_body
+                .split('\n')
+                .map(text => (
+                <p><em dangerouslySetInnerHTML={{__html: text}}></em></p>
+            ))
+    }
+
 
     render(){
         return (
@@ -33,19 +56,21 @@ class Main extends Component {
                             <div className="bftn-form call-action-form">
                                 <div>
                                     {/* <h3>Time is Running Out. Tell Congress:</h3><h3>Restore Net Neutrality Now!</h3> */}
-                                    <h3 dangerouslySetInnerHTML={this.renderHeaderContent()}></h3>
+                                    {this.props.content && this.petitionHeader()}
                                 </div>
-                                <Form headerContent={this.props.headerContent} isMobile={this.props.isMobile}/>
+                                <Form content={this.props.content} isMobile={this.props.isMobile}/>
                             </div>
                         </div>
                     </div>
                     <div className="unit" >
                         <div id="congress">
-                            <div>
+                            <h4 dangerouslySetInnerHTML={this.subContentHeader()}></h4>
+                            {this.props.content && this.subContentBody()}
+                            {/* <div>
                                 <h4>Here's the language that will be sent to Congress:</h4>
                                 <p><em>"The FCC's vote to destroy net neutrality protections cannot stand. Please co-sponsor, sign the discharge petition for, and vote for the Congressional Review Act resolution to overturn the FCC's repeal of net neutrality."</em></p>
                                 <p><em>“The FCC's decision willfully ignored the outcry of tens of millions of people, and it abdicated the FCC's responsibility to protect the internet from ISP blocking and discrimination. Please overturn it to restore net neutrality and ensure that the internet continues to enable speech, commerce, and democracy."</em></p>
-                            </div>
+                            </div> */}
                         </div>
                     <hr/>
                         <div style={{color: 'white'}}>
@@ -59,7 +84,7 @@ class Main extends Component {
                                 <p><a href="#signThePetition">Sign the petition and call on Congress to pass the CRA resolution to stop the repeal of net neutrality before it’s too late.</a></p>
                                 <p>Polls show 86% of Americans oppose the FCC's move to end net neutrality. Net neutrality is vital to free speech, small business, and communities that might not otherwise have a voice in the mainstream media. The only ones who benefit from the repeal of net neutrality are Big Cable executives and the lobbyists they employ. There’s NO EXCUSE —  every lawmaker, both Republican or Democrat, must support net neutrality.</p>
                             </div> */}
-                            <div dangerouslySetInnerHTML={this.renderContent()}/>
+                            <div dangerouslySetInnerHTML={this.renderMainContent()}/>
                         </div>
                     </div>
                 </div>

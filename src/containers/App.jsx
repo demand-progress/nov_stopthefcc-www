@@ -60,10 +60,10 @@ class App extends Component  {
                 <Main 
                   logoCheck={this.logoCheck} 
                   isMobile={this.state.isMobile}
-                  content={this.state.content}
-                  headerContent={this.state.acf}
+                  main={this.state.content}
+                  content={this.state.acf}
                   />
-                <Footer showLogos={this.state.showLogos} isMobile={this.state.isMobile}/>
+                <Footer content={this.state.acf} showLogos={this.state.showLogos} isMobile={this.state.isMobile}/>
             </div>
         )
     }

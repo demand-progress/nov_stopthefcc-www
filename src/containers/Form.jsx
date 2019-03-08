@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { CONF, URLS } from '../config';
 import { getQueryVariables } from '../utils';
 
+const formatPhoneNumber = number => {
+  const front3 = number.split('').slice(0, 3).join('')
+  const mid3 = number.split('').slice(3, 6).join('')
+  const last4 = number.split('').slice(6).join('')
+
+  return front3 + '-' + mid3 + '-' + last4
+}
+
 class Form extends Component {
 
     constructor(props) {
@@ -14,6 +22,7 @@ class Form extends Component {
 
         this.renderHeaderText = this.renderHeaderText.bind(this);
         this.renderFormDisclaimer = this.renderFormDisclaimer.bind(this);
+        this.formModal = this.formModal.bind(this);
     }
 
     componentDidMount(){
@@ -30,16 +39,49 @@ class Form extends Component {
       // }
     }
 
-    renderHeaderText() {
-      const { headerContent } = this.props;
+    /**
+     * <div className="modal-thanks-text">
+                  <p>Please call Congress and tell your lawmakers to overturn the FCC and restore net neutrality:</p>
+                  <h3>Call Now:</h3>
+                  <h3><a href="tel:8582640403">858-264-0403</a></h3>
+                  <p>We’ll connect you to your lawmakers.  You can use this script — just introduce yourself, be polite, and say:</p>
+                  <p><em>"I support Title Two net neutrality and I urge you to sign the discharge petition and vote for the Congressional Review Act ‘resolution of disapproval’ to restore net neutrality."</em></p>
+                  </div>
+     */
 
-      return headerContent ? headerContent.header_text : ''
+    formModal() {
+      const { 
+        modal_caption, 
+        modal_number_header, modal_phone_number, 
+        modal_body } = this.props.content;
+
+        const phoneNumber = `tel: ${modal_phone_number}`;
+        const formattedNumber = formatPhoneNumber(modal_phone_number);
+        const body = modal_body.split('\n')
+        const modalText = body[0]
+        const modalQuote = body[1]
+
+        return (
+          <div className="modal-thanks-text">
+            <p>{modal_caption}</p>
+            <h3>{modal_number_header}</h3>
+            <h3><a href={phoneNumber}>{formattedNumber}</a></h3>
+            <p>{modalText}</p>
+            <p><em>{modalQuote}</em></p>
+          </div>
+        )
+    }
+
+    renderHeaderText() {
+      const { content } = this.props;
+
+      return content ? content.header_text : ''
     }
 
     renderFormDisclaimer() {
-      const { headerContent } = this.props;
+      const { content } = this.props;
 
-      return headerContent ? headerContent.form_disclaimer : ''
+      return content ? content.form_disclaimer : ''
     }
 
     render() {
@@ -93,16 +135,17 @@ class Form extends Component {
               <div className="modal-thanks">
                 <a className="close-thanks" href="#" onClick={ this.closeModal }>×</a>
                 <header>
-                  <h2 id="modal-header-thanks">Thanks for signing.</h2>
+                  <h2 id="modal-header-thanks">{this.props.content && this.props.content.modal_header}</h2>
                 </header>
                 <article>
-                <div className="modal-thanks-text">
+                {/* <div className="modal-thanks-text">
                   <p>Please call Congress and tell your lawmakers to overturn the FCC and restore net neutrality:</p>
                   <h3>Call Now:</h3>
                   <h3><a href="tel:8582640403">858-264-0403</a></h3>
                   <p>We’ll connect you to your lawmakers.  You can use this script — just introduce yourself, be polite, and say:</p>
                   <p><em>"I support Title Two net neutrality and I urge you to sign the discharge petition and vote for the Congressional Review Act ‘resolution of disapproval’ to restore net neutrality."</em></p>
-                  </div>
+                  </div> */}
+                  {this.props.content && this.formModal()}
                 </article>
               </div>
             </div>

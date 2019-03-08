@@ -29,6 +29,14 @@ class  Footer extends  Component {
                                 {name: "Watchdog.net", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/1f78005d-52c9-47c8-80b9-bd6734fd5fde/watchdog_small.png"},
                                 {name: "The Zero Hour", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/587568a2-4166-4715-84b7-74dab42bf9c0/TZH Logo.jpg"}]
             }
+
+            this.footerOrgs = this.footerOrgs.bind(this);
+        }
+
+        footerOrgs() {
+            const { content } = this.props;
+
+            return { __html: content ? content.footer_orgs : ''}
         }
 
         componentDidMount(){
@@ -80,13 +88,17 @@ class  Footer extends  Component {
             let logosText = "Demand Progress, American Family Voices, CA Clean Money Action Fund, California League of Conservation Voters, Center For Media Justice, Climate Hawks Vote, Color Of Change, Common Cause, Common Dreams, CPD Action, Daily Kos, Democracy for America, Free Press Action Fund, Friends of the Earth Action, The Nation, OpenMedia, People For The American Way, Presente Action, Progress America, RootsAction, SumOfUs, Watchdog.net, The Zero Hour"
             let tweet = "https://twitter.com/intent/tweet?text=Tell%20your%20representative%20to%20stand%20for%20real%20%23NetNeutrality%20by%20supporting%20the%20Congressional%20Review%20Act%20resolution%20to%20save%20the%20open%20internet.%20Call%20Congress%20TODAY%3A%20https%3A%2F%2Fstopthefcc.net%2F%20"
             
-            if(this.props.showLogos || !this.props.isMobile){
-                    logos = this.state.orderedLogos.map(({name, url}) => {
-                        return <Logo key={name} alt={name} src={url}/>
-                        } 
-                    )
-            }
-            
+            // if(this.props.showLogos || !this.props.isMobile){
+            //         logos = this.state.orderedLogos.map(({name, url}) => {
+            //             return <Logo key={name} alt={name} src={url}/>
+            //             } 
+            //         )
+            // }
+            logos = this.state.orderedLogos.map(({name, url}) => {
+                return <Logo key={name} alt={name} src={url}/>
+                } 
+            )
+            const { content } = this.props
             return (
                 <div id="footer">
                     <div className="footer">
@@ -109,18 +121,18 @@ class  Footer extends  Component {
                                     </a>
                                 </div> 
                                 <div className="press-inquiries">
-                                    <h3>For Press inquiries, please contact us at:</h3>
+                                    <h3>{content && content.contact_header}</h3>
                                     <p>
-                                        <a className="no-em" href="tel:1-202-681-7582">202-681-7582</a> <span style={{ color: 'white' }}>or</span> <a href="mailto:press@demandprogress.org">press@demandprogress.org</a>
+                                        <a className="no-em" href="tel:1-202-681-7582">{content && content.contact_number}</a> <span style={{ color: 'white' }}>or</span> <a href="mailto:press@demandprogress.org">{content && content.contact_link}</a>
                                     </p>
     
                                     <br/>
                                     <p>
-                                        <a href="https://demandprogress.org/privacy-policy/" target="_blank">Our privacy policy</a>
+                                        <a href={content && content.privacy_policy_link} target="_blank">{content && content.privacy_policy_text}</a>
                                     </p>
                                 </div>        
                             </div>
-                            <div className="orgs">{logosText}</div>
+                            <div className="orgs" dangerouslySetInnerHTML={this.footerOrgs()}/>
                         </div>
                     </div>
                 </div>);

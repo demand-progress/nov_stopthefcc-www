@@ -583,7 +583,7 @@ template {
   font-size: 20px;
   border-radius: 4px;
   text-transform: uppercase;
-  background-color: #ff1a09;
+  background-color: rgb(255, 26, 9);
   color: #FFF;
   cursor: pointer;
 }
