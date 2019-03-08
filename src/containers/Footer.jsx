@@ -17,57 +17,18 @@ class  Footer extends  Component {
                     {name: "Democracy for America", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/04755047-18c4-470c-9d1b-521e35e56728/dfa.png"},
                     {name: "Friends of the Earth Action", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/fbaafaa8-32cd-423a-818e-07566dc8d807/FoeAction.png"},
                     {name: "OpenMedia", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/0378fb59-618c-4389-a2ba-3fb1d8562f67/open-media.jpg"},
-                    {name: "Other 98%", url: "/images/o98-black-horizontal.png"},
-                    //People Demanding Action
+                    {name: "Other 98%", url: "images/o98-black-horizontal.png"},
+                    {name: "People Demanding Action", url: "images/Logo-PDAction.jpg"},
                     {name: "Progress America", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/8e3e64b3-9932-4b4a-8f80-05d56c6510f7/progress-america.png"},
-                    {name: "Public Citizen", url: "/images/publiccitizen.jpg"},
+                    {name: "Public Citizen", url: "images/publiccitizen.jpg"},
                     {name: "RootsAction", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/e596fb0d-df61-44c7-82c3-20ea65ad5052/RootsAction.png"},
                     {name: "Watchdog.net", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/1f78005d-52c9-47c8-80b9-bd6734fd5fde/watchdog_small.png"},
                 ]
             }
         }
+
         componentDidMount(){
-      // const swaps = [
-      //   '6CPDA','6CHV', '6CommonCause', '6CorporateAcct', '6Kos', '6DemandProgress','6DFA','6FOE', '6Greenpeace', '6OpenMedia', '6PeoplesAction', '6PFAW','6ProgressAmerica','6PCAF','6SumOfUs', '6Nation', '6Watchdog'
-      // ]
-      
-      // const includeBusinessBox = swaps.includes(this.state.source)
-
-      // if(includeBusinessBox){
-      //   this.setState({
-      //     includeBusinessBox: includeBusinessBox
-      //   })
-      // }
-    
-      
- 
         }
-
-   
-        // if(this.state.allLogos){
-        //    let orderedLogos = this.state.allLogos.sort(function(a, b) {
-        //        let firstLogoName = a.name.toLowerCase();
-        //        let secondLogoName = b.name.toLowerCase();
-        //         if(firstLogoName.indexOf('the ') === 0) {
-        //             firstLogoName =  firstLogoName.substring(4);
-        //         }
-
-        //         if(secondLogoName.indexOf('the ') === 0){
-        //             secondLogoName = secondLogoName.substring(4);
-        //         }
-
-        //         if (/\d/.test(firstLogoName)){
-        //             return -1 
-        //         } else if(/\d/.test(secondLogoName)){
-        //             return 1
-        //         } else {
-        //             return (firstLogoName < secondLogoName) ? -1 : (firstLogoName > secondLogoName) ? 1 : 0;
-        //         }     
-        //     })
-            
-          
-        // }
-        
 
         render(){
            
