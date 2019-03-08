@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import { CONF, URLS } from '../config';
 import { getQueryVariables } from '../utils';
 
-const formatPhoneNumber = number => {
-  const front3 = number.split('').slice(0, 3).join('')
-  const mid3 = number.split('').slice(3, 6).join('')
-  const last4 = number.split('').slice(6).join('')
-
-  return front3 + '-' + mid3 + '-' + last4
-}
-
 class Form extends Component {
 
     constructor(props) {
@@ -55,8 +47,6 @@ class Form extends Component {
         modal_number_header, modal_phone_number, 
         modal_body } = this.props.content;
 
-        const phoneNumber = `tel: ${modal_phone_number}`;
-        const formattedNumber = formatPhoneNumber(modal_phone_number);
         const body = modal_body.split('\n')
         const modalText = body[0]
         const modalQuote = body[1]
@@ -65,7 +55,7 @@ class Form extends Component {
           <div className="modal-thanks-text">
             <p>{modal_caption}</p>
             <h3>{modal_number_header}</h3>
-            <h3><a href={phoneNumber}>{formattedNumber}</a></h3>
+            <h3><a href="tel:8582640403">{modal_phone_number}</a></h3>
             <p>{modalText}</p>
             <p><em>{modalQuote}</em></p>
           </div>
