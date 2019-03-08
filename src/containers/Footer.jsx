@@ -77,7 +77,7 @@ class  Footer extends  Component {
                                     </p>
                                 </div>        
                             </div>
-                            <div className="orgs">{logosText}</div>
+                            <div className="orgs">{logosText.substring(0, logosText.length-2)}</div>
                         </div>
                     </div>
                 </div>);
