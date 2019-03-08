@@ -1,6 +1,6 @@
 const CONF = {
-    actionKitPageShortName: 'stop_the_fcc_nov_swap_2018',
-    actionKitPageId: 2532
+    actionKitPageShortName: 'stop_the_fcc_mar_swap_2019',
+    actionKitPageId: 2662
 };
 const URLS = {
     actionKit: 'https://act.demandprogress.org/act/',
