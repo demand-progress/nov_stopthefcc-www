@@ -13,16 +13,17 @@ class  Footer extends  Component {
                     {name: "Color Of Change", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/285d4ce4-d080-4bc7-baa1-801d7bf38f63/colorofchange.png"},
                     {name: "Common Dreams", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/3dc1959d-db1a-4f84-af44-edda916f14dc/CD_stacked_white.jpg"},
                     {name: "Common Cause", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/c6c042b0-46d1-451a-8bd4-7b10feed83d3/common-cause.jpg"},
-                    {name: "Daily Kos", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/c7679f4c-3ee7-4670-84a5-b0c4f2f2e2dc/DailyKosLogo.png"},
                     {name: "Democracy for America", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/04755047-18c4-470c-9d1b-521e35e56728/dfa.png"},
                     {name: "Friends of the Earth Action", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/fbaafaa8-32cd-423a-818e-07566dc8d807/FoeAction.png"},
                     {name: "OpenMedia", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/0378fb59-618c-4389-a2ba-3fb1d8562f67/open-media.jpg"},
                     {name: "Other 98%", url: "images/o98-black-horizontal.png"},
+                    {name: "People For The American Way", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/dd95fcb4-d978-47c4-901c-c222051af4dc/pfaw-logo.jpg"},
                     {name: "People Demanding Action", url: "images/Logo-PDAction.jpg"},
                     {name: "Progress America", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/8e3e64b3-9932-4b4a-8f80-05d56c6510f7/progress-america.png"},
                     {name: "Public Citizen", url: "images/publiccitizen.jpg"},
                     {name: "RootsAction", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/e596fb0d-df61-44c7-82c3-20ea65ad5052/RootsAction.png"},
                     {name: "Watchdog.net", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/1f78005d-52c9-47c8-80b9-bd6734fd5fde/watchdog_small.png"},
+                    {name: "Win Without War", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/b0f2a7b7-e4fe-4839-ac27-c2d3d1e05d49/winwithoutwar.jpg"},
                 ]
             }
         }
@@ -50,6 +51,7 @@ class  Footer extends  Component {
                         <div className="logos-unit">
                             <div className="built-by">
                                 <p><br/><br/>Built by:</p> <img src="https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/ffb2acc8-9b36-40ef-bb9a-deb6ecb5ee55/demand-progress.png"/>
+                                <p><br/><br/>In partnership with:</p> <img src="https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/c7679f4c-3ee7-4670-84a5-b0c4f2f2e2dc/DailyKosLogo.png" alt="Daily Kos" />
                             </div>
                             <div className="logos" style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "center"}}>
                                 {logos}
@@ -70,7 +72,6 @@ class  Footer extends  Component {
                                     <p>
                                         <a className="no-em" href="tel:1-202-681-7582">202-681-7582</a> <span style={{ color: 'white' }}>or</span> <a href="mailto:press@demandprogress.org">press@demandprogress.org</a>
                                     </p>
-    
                                     <br/>
                                     <p>
                                         <a href="https://demandprogress.org/privacy-policy/" target="_blank">Our privacy policy</a>
