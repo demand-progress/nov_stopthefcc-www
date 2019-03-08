@@ -8,6 +8,7 @@ class  Footer extends  Component {
                 orderedLogos: [
                     {name: "American Family Voices", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/383c42bf-7f92-4e72-8c00-38b9f9c60ee4/PasAFV.jpg"},
                     {name: "California Clean Money Action Fund", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/41fa8bce-c0c2-4b86-a9bd-5dc9c0d3cec8/CCMAF Logo.png"},
+                    {name: "California League of Conservation Voters", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/7b85ae3c-aed0-4941-a6b4-563ecaa87693/clcvlogo_colorhires_big.jpg"},
                     {name: "Center For Media Justice", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/f8807302-595b-480c-b0eb-a44453606a1d/CMJ logo hi-res.jpg"},
                     {name: "Climate Hawks Vote", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/afcdfbb2-115e-42e7-94e0-a82f78f50e94/CHV Logo2.jpg"},
                     {name: "Color Of Change", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/285d4ce4-d080-4bc7-baa1-801d7bf38f63/colorofchange.png"},
@@ -15,6 +16,7 @@ class  Footer extends  Component {
                     {name: "Common Cause", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/c6c042b0-46d1-451a-8bd4-7b10feed83d3/common-cause.jpg"},
                     {name: "Democracy for America", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/04755047-18c4-470c-9d1b-521e35e56728/dfa.png"},
                     {name: "Friends of the Earth Action", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/fbaafaa8-32cd-423a-818e-07566dc8d807/FoeAction.png"},
+                    {name: "The Nation", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/5d4ea140-599a-4210-a902-14a9da77795a/NationLogoPNG.png"},
                     {name: "OpenMedia", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/0378fb59-618c-4389-a2ba-3fb1d8562f67/open-media.jpg"},
                     {name: "Other 98%", url: "images/o98-black-horizontal.png"},
                     {name: "People For The American Way", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/dd95fcb4-d978-47c4-901c-c222051af4dc/pfaw-logo.jpg"},
