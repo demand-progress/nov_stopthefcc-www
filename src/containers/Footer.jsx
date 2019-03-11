@@ -25,6 +25,7 @@ class  Footer extends  Component {
                     {name: "Progress America", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/8e3e64b3-9932-4b4a-8f80-05d56c6510f7/progress-america.png"},
                     {name: "Public Citizen", url: "images/publiccitizen.jpg"},
                     {name: "RootsAction", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/e596fb0d-df61-44c7-82c3-20ea65ad5052/RootsAction.png"},
+                    {name: "SumOfUs", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/419f8264-2545-4ec1-bad8-6b888b543d46/SumOfUs_lg_color copy.png"},
                     {name: "Watchdog.net", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/1f78005d-52c9-47c8-80b9-bd6734fd5fde/watchdog_small.png"},
                     {name: "Win Without War", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/b0f2a7b7-e4fe-4839-ac27-c2d3d1e05d49/winwithoutwar.jpg"},
                 ]
