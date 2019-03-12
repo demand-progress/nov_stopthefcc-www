@@ -14,6 +14,7 @@ class  Footer extends  Component {
                     {name: "Color Of Change", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/285d4ce4-d080-4bc7-baa1-801d7bf38f63/colorofchange.png"},
                     {name: "Common Dreams", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/3dc1959d-db1a-4f84-af44-edda916f14dc/CD_stacked_white.jpg"},
                     {name: "Common Cause", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/c6c042b0-46d1-451a-8bd4-7b10feed83d3/common-cause.jpg"},
+                    {name: "Courage Campaign", url: "images/Courage-Logo-Color-High-Rez.jpg"},
                     {name: "Democracy for America", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/04755047-18c4-470c-9d1b-521e35e56728/dfa.png"},
                     {name: "Free Press Action Fund", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/45273e5e-d777-40f8-9d87-f71348e80916/Free_Press_Action_logo_RGB_horizontal_blue.png"},
                     {name: "Friends of the Earth Action", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/fbaafaa8-32cd-423a-818e-07566dc8d807/FoeAction.png"},
