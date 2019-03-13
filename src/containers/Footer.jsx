@@ -23,6 +23,7 @@ class  Footer extends  Component {
                     {name: "Other 98%", url: "images/o98-black-horizontal.png"},
                     {name: "People For The American Way", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/dd95fcb4-d978-47c4-901c-c222051af4dc/pfaw-logo.jpg"},
                     {name: "People Demanding Action", url: "images/Logo-PDAction.jpg"},
+                    {name: "Presente Action", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/e46eef2f-1628-4f7f-aa8f-6ba7357f2552/PresenteAction2016.png"},
                     {name: "Progress America", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/8e3e64b3-9932-4b4a-8f80-05d56c6510f7/progress-america.png"},
                     {name: "Public Citizen", url: "images/publiccitizen.jpg"},
                     {name: "RootsAction", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/e596fb0d-df61-44c7-82c3-20ea65ad5052/RootsAction.png"},
