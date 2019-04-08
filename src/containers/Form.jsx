@@ -57,7 +57,7 @@ class Form extends Component {
           </button>
         </div>
       </form>
-      <span><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span>
+      <span style={{color: 'white'}}><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span>
       <br/><br/>
       </div>
       )
@@ -84,7 +84,7 @@ class Form extends Component {
                   <h3>Call Now:</h3>
                   <h3><a href="tel:8582640403">858-264-0403</a></h3>
                   <p>We’ll connect you to your lawmakers.  You can use this script — just introduce yourself, be polite, and say:</p>
-                  <p><em>"I'm calling to ask my lawmakers to co-sponsor the 'Save the Internet Act,' which will help overturn the FCC’s net neutrality repeal. I expect them to support real net neutrality protections, not laws written by cable company lobbyists. Thank you."</em></p>
+                  <p><em>"I'm calling to tell my lawmakers I support strong net neutrality, and I want them to vote 'yes' on the Save the Internet Act and reject any bad amendments. Thank you."</em></p>
                   </div>
                 </article>
               </div>
