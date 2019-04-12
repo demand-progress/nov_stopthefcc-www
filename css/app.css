@@ -751,7 +751,7 @@ template {
 
 .bftn-homepage .callsuccess-modal .modal-content h4 em {
   display: block;
-  color: #f94220;
+  color: #ebf82c;
 }
 
 .bftn-homepage .callsuccess-modal .modal-content p {
@@ -1025,7 +1025,7 @@ div.modal-thanks-text p:nth-of-type(3) a{
 
 .back-to-form-link {
   font-weight: bold;
-  color: #ff1a09;
+  color: orange;
   font-size: 19px;
   text-align: center;
 }
@@ -1064,7 +1064,7 @@ padding: 20px 0px;
 }
 
 .modal-thanks header {
-background-color: #ff2121;
+background-color: orange;
 padding: 20px 30px;
 border-radius: 8px 8px 0 0;
 text-align: center;
