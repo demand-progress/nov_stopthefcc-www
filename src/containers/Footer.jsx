@@ -32,6 +32,8 @@ class  Footer extends  Component {
                     {name: "Win Without War", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/b0f2a7b7-e4fe-4839-ac27-c2d3d1e05d49/winwithoutwar.jpg"},
                 ]
             }
+
+            this.footerOrgs = this.footerOrgs.bind(this);
         }
 
         componentDidMount(){

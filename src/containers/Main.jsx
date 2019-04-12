@@ -6,11 +6,46 @@ class Main extends Component {
 
     constructor(props){
         super(props);
+
+        this.renderMainContent = this.renderMainContent.bind(this);
+        this.petitionHeader = this.petitionHeader.bind(this);
+        this.subContentBody = this.subContentBody.bind(this);    
+        this.subContentHeader = this.subContentHeader.bind(this);
     }
+
+    petitionHeader() {
+        const { content } = this.props
+
+        return content.header_cta.split('\n').map(text => (
+            <h3 dangerouslySetInnerHTML={{__html: text}}></h3>
+        ))
+    }
+
+
+    renderMainContent() {
+        const { main } = this.props
+
+        return {__html: main ? main.rendered : ''}
+    }
+
+    subContentHeader() {
+        const { content } = this.props;
+
+        return {__html: content ? content.sub_content_header : ''}
+    }
+
+    subContentBody() {
+        const { content } = this.props;
+            return content.sub_content_body
+                .split(':')
+                .map(text => (
+                <p><em dangerouslySetInnerHTML={{__html: text}}></em></p>
+            ))
+    }
+
 
     render(){
         return (
-            
         <div id="app">
             <div className="unit">
                 <div className="hero" id="bftn-action-form">
@@ -18,18 +53,17 @@ class Main extends Component {
                         <div id="signThePetition">
                             <div className="bftn-form call-action-form">
                                 <div>
-                                    <h3>
-                                      Tell Congress:
-                                      <br/>
-                                      Support the ‘Save the Internet Act’ to Restore Net Neutrality!
-                                    </h3>
+                                    {/* <h3>Time is Running Out. Tell Congress:</h3><h3>Restore Net Neutrality Now!</h3> */}
+                                    {this.props.content && this.petitionHeader()}
                                 </div>
-                                <Form isMobile={this.props.isMobile}/>
+                                <Form content={this.props.content} isMobile={this.props.isMobile}/>
                             </div>
                         </div>
                     </div>
                     <div className="unit" >
                         <div id="congress">
+                            <h4 dangerouslySetInnerHTML={this.subContentHeader()}></h4>
+                            {this.props.content && this.subContentBody()}
                             <div>
                                 <h4>Here's the language that will be sent to Congress:</h4>
                                 <p><em>"The FCC's vote to destroy net neutrality protections cannot stand. Please co-sponsor and vote for the Save the Internet Act to fully restore the open internet protections repealed by the FCC, and reject any legislation that does not provide the same level of protections as the 2015 Open Internet Order."</em></p>

@@ -11,6 +11,9 @@ class Form extends Component {
         this.state.countDown = 5
         this.onSubmit = this.onSubmit.bind(this)
         this.closeModal = this.closeModal.bind(this)
+
+        this.renderHeaderText = this.renderHeaderText.bind(this);
+        this.renderFormDisclaimer = this.renderFormDisclaimer.bind(this);
     }
 
     componentDidMount(){
@@ -27,15 +30,28 @@ class Form extends Component {
       // }
     }
 
+    renderHeaderText() {
+      const { content } = this.props;
+
+      return content ? content.header_text : ''
+    }
+
+    renderFormDisclaimer() {
+      const { content } = this.props;
+
+      return content ? content.form_disclaimer : ''
+    }
+
     render() {
       let modal = null;
       let topOfPage = null;
       let middle = null; 
-
+      console.log('FORM PROPS', this.props)
       const subHeader = (
         <div id="subHeader">
           <div>
-            <p><strong>The FCC gutted net neutrality and gave Big Cable the power to control the internet. Millions have spoken out, and now the Save the Internet Act has been introduced in the House and Senate to fully restore protections. Contact your lawmakers to demand they support legislation to restore net neutrality!</strong></p>
+            {/* <p><strong>The FCC gutted net neutrality and gave Big Cable the power to control the internet. But after millions of people spoke out, the Senate voted to overturn the agency's repeal. Now the House of Representatives can do the same by passing a special resolution — but they must act before the end of 2018. Contact your reps to demand net neutrality!</strong></p> */}
+            <p><strong>{this.renderHeaderText()}</strong></p>
           </div>
         </div>
       )
@@ -57,7 +73,8 @@ class Form extends Component {
           </button>
         </div>
       </form>
-      <span style={{color: 'white'}}><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span>
+      {/* <span><i>One or more of the participating organizations (listed at bottom) may email you about their campaigns.</i></span> */}
+      <span style={{color: 'white'}}><i>{this.renderFormDisclaimer()}</i></span>
       <br/><br/>
       </div>
       )
@@ -80,7 +97,7 @@ class Form extends Component {
                 </header>
                 <article>
                 <div className="modal-thanks-text">
-                  <p>Please call Congress and tell your lawmakers to restore net neutrality:</p>
+                  <p>Please call Congress and tell your lawmakers to overturn the FCC and restore net neutrality:</p>
                   <h3>Call Now:</h3>
                   <h3><a href="tel:8582640403">858-264-0403</a></h3>
                   <p>We’ll connect you to your lawmakers.  You can use this script — just introduce yourself, be polite, and say:</p>
