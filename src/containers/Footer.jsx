@@ -21,7 +21,16 @@ class  Footer extends  Component {
                     {name: "Watchdog.net", url: "https://cdn.tipe.io/5ae9f2a4323fc90013cb4dfa/1f78005d-52c9-47c8-80b9-bd6734fd5fde/watchdog_small.png"},
                 ]
             }
+
+            this.footerOrgs = this.footerOrgs.bind(this);
         }
+
+        footerOrgs() {
+            const { content } = this.props;
+
+            return { __html: content ? content.footer_orgs : ''}
+        }
+
         componentDidMount(){
       // const swaps = [
       //   '6CPDA','6CHV', '6CommonCause', '6CorporateAcct', '6Kos', '6DemandProgress','6DFA','6FOE', '6Greenpeace', '6OpenMedia', '6PeoplesAction', '6PFAW','6ProgressAmerica','6PCAF','6SumOfUs', '6Nation', '6Watchdog'
@@ -112,7 +121,7 @@ class  Footer extends  Component {
                                     </p>
                                 </div>        
                             </div>
-                            <div className="orgs">{logosText}</div>
+                            <div className="orgs" dangerouslySetInnerHTML={this.footerOrgs()}/>
                         </div>
                     </div>
                 </div>);
