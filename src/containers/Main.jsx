@@ -9,6 +9,7 @@ class Main extends Component {
 
         this.renderStatementText = this.renderStatementText.bind(this)
         this.renderAboutText = this.renderAboutText.bind(this)
+        this.renderStatementLead = this.renderStatementLead.bind(this)
     }
 
     renderStatementText(){
@@ -33,14 +34,13 @@ class Main extends Component {
                         <div id="signThePetition">
                             <div className="bftn-form call-action-form">
                                 <div>
-                                    <h3>
+                                    {/* <h3>
                                       Tell Congress:
                                       <br/>
                                       Support the ‘Save the Internet Act’ to Restore Net Neutrality!
-                                    </h3>
-                                    {/**
-                                        <h3><p dangerouslySetInnerHTML={this.renderStatementLead()}></p></h3>
-                                    */}
+                                    </h3> */}   
+                                    <h3 dangerouslySetInnerHTML={this.renderStatementLead()} />
+                                   
                                 </div>
                                 <Form isMobile={this.props.isMobile}/>
                             </div>
