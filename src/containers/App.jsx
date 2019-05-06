@@ -42,7 +42,7 @@ class App extends Component  {
    }
 
    getActionKitData(){
-     fetch('https://cors-anywhere.herokuapp.com/https://vexq0wyt42.execute-api.us-east-1.amazonaws.com/default/dp-ak-service?page=2662')
+     fetch('https://6iz2t3g6ka.execute-api.us-east-1.amazonaws.com/dev/?page_id=2662')
       .then(res => res.json())
       .then(data => {
         console.log(data.objects[0])
