@@ -10,15 +10,15 @@ class Signup extends Component {
     render(){
         return (
             
-        <div id="app">
+        <div id="app" className="sign-up-page">
             <div className="unit">
-                <div className="hero" id="bftn-action-form">
+                <div className="hero" id="signup-action-form">
                     <div>
                         <div id="signThePetition">
                             <div className="bftn-form call-action-form">
                                 <div>
                                     <h3>
-                                      Thanks For Signing Up
+                                      Thanks For Signing!
                                     </h3>
                                 </div>
     
@@ -26,29 +26,22 @@ class Signup extends Component {
                         </div>
                     </div>
                     <div className="unit" >
-                        <div id="congress">
+                        <div id="congress-alert">
                             <div>
                                 
-                                <p><em>Please Call Congress And Tell Your Lawyers To Restore Net Neutrality:</em></p>
+                                <p>There’s still more you can do — please call Congress and tell your lawmakers to restore net neutrality.</p>
 								<h4>
 									Call Now: <br />
 									858-264-0403
 								</h4>
-								<p><em>We'll connect you to your lawmakers. You can use this script -- just introduce yourself, be polite, and say:</em></p>
+								<p>We'll connect you to your lawmakers. You can use this script — just introduce yourself, be polite, and say:</p>
 
-								<p><em><i>"I'm calling to tell my lawmakers I support strong net neutrality and I want them to vote 'yes' on the Save The Internet Act and reject any bad admendments. Thank you."</i></em></p>
+								<p><em><i>"I'm calling to tell my lawmakers I support strong net neutrality, and I want them to cosponsor and demand a vote on the Save the Internet Act in the Senate. Thank you."</i></em></p>
 
-
-                            </div>
-                        </div>
-                    <hr/>
-                        <div style={{color: 'white'}}>
-                            <div>
-                            
-                                <p>Save The Internet Act has been introduced in the House and Senate to fully restore protections.</p>
 
                             </div>
                         </div>
+                   
                     </div>
                 </div>
             </div>
