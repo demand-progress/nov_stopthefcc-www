@@ -37,7 +37,7 @@ class App extends Component  {
    
     render(){
         return(
-            <div>
+            <div className="bftn-homepage">
                 <Main logoCheck={this.logoCheck} isMobile={this.state.isMobile}/>
                 <Footer showLogos={this.state.showLogos} isMobile={this.state.isMobile}/>
             </div>

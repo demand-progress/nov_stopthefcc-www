@@ -1,15 +1,17 @@
 const webpack = require('webpack');
 
+
 module.exports = [{
     devServer: {
-        inline:true,
-        port: 8008
+		port: 8008,
+		historyApiFallback: true,
     },
     devtool: 'none',
     entry: ["babel-polyfill", "./src/app.jsx"],
     output: {
         path: __dirname + '/src',
-        filename: "bundle.js"
+		filename: "bundle.js",
+		publicPath: '/'
     },
     module: {
         loaders: [{

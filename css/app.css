@@ -3,7 +3,6 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-family: Montserrat, sans-serif;
-  background-color: black;
 }
 
 .logoText {
@@ -937,6 +936,15 @@ p.imageHeaders {
   color: white;
 }
 
+#congress-alert {
+  text-align: center;
+}
+
+#signup {
+  text-align: center;
+  color: white;
+}
+
 #congress h4 {
   font-weight: 700;
   color: #ebf82c;
@@ -1028,6 +1036,43 @@ div.modal-thanks-text p:nth-of-type(3) a{
   color: orange;
   font-size: 19px;
   text-align: center;
+}
+
+.sign-up-page {
+	background-color: white;
+	color: #3C3736;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.sign-up-page h1 {
+	font-size: 20px;
+}
+
+.sign-up-page   p,  .sign-up-page > p > em  {
+	color: #3C3736;
+	font-family: "Open Sans"!important;
+    font-size: 16px!important;
+    font-style: normal !important;
+}
+.sign-up-page h3 {
+	font-size: 50px;
+    line-height: 1.1em;
+    margin-bottom: 24px;
+    color: #3C3736 !important;
+}
+
+.sign-up-page h4 {
+	font-size: 32px;
+    line-height: 1.1em;
+    margin-bottom: 24px;
+    color: #3C3736 !important;
+}
+
+.sign-up-page .unit {
+  width: 800px;
+  margin: 0px auto;
+  position: relative;
 }
 
 body.modal-open-thanks {
@@ -1167,12 +1212,21 @@ color: #272F32;
       width: 90%;
       display: block;
   }
+  
+  .sign-up-page .unit {
+      width: 90%;
+      display: block;
+  }
 
   .bftn-homepage #footer .logos-unit {
       width: 90%;
   }
 
   .bftn-homepage .unit p {
+      width: auto;
+  }
+  
+  .sign-up-page .unit p {
       width: auto;
   }
 

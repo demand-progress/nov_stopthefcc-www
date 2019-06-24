@@ -1,7 +1,9 @@
 // Modules
 import React from 'react';
 import {render} from 'react-dom';
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import App from './containers/App.jsx'
+import Signup from './containers/Signup.jsx'
 
 // Checking for outdated browsers
 (() => {
@@ -18,4 +20,13 @@ import App from './containers/App.jsx'
     }
 })()
 
-render(<App/> ,document.getElementById('root'));
+const routing = (
+  <Router>
+    <div>
+      <Route exact path="/" component={App} />
+      <Route exact path="/signup" component={Signup} />
+    </div>
+  </Router>
+)
+
+render(routing ,document.getElementById('root'));
