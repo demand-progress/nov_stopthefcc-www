@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const UglifyJsPlugin = require("uglifyjs-3-webpack-plugin");
 
 
 module.exports = [{
@@ -14,7 +15,7 @@ module.exports = [{
 		publicPath: '/'
     },
     module: {
-        loaders: [{
+        rules : [{
             test: /\.jsx?$/,
             exclude: /(node_modules)/,
             loader: 'babel-loader',
@@ -29,7 +30,15 @@ module.exports = [{
             'NODE_ENV': JSON.stringify('production')
           }
         }),
-        new webpack.optimize.UglifyJsPlugin(), //minify everything
+        new UglifyJsPlugin({
+        		uglifyOptions: {
+        			warnings: false,
+        			ie8: false,
+        			output: {
+        				comments: false
+        			}
+        		}
+        	}),
         new webpack.optimize.AggressiveMergingPlugin()//Merge chunks 
       ]
 }];
