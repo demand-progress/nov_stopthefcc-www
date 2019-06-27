@@ -1,7 +1,7 @@
 // Modules
 import React from 'react';
 import {render} from 'react-dom';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Link, HashRouter, BrowserRouter as Router } from 'react-router-dom'
 import App from './containers/App.jsx'
 import Signup from './containers/Signup.jsx'
 
@@ -21,12 +21,12 @@ import Signup from './containers/Signup.jsx'
 })()
 
 const routing = (
-  <Router basename={process.env.PUBLIC_URL}>
+  <HashRouter basename={process.env.PUBLIC_URL}>
     <div>
       <Route exact path="/" component={App} />
       <Route exact path="/signup" component={Signup} />
     </div>
-  </Router>
+  </HashRouter>
 )
 
 render(routing ,document.getElementById('root'));
