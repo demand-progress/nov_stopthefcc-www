@@ -24,7 +24,7 @@ const routing = (
   <HashRouter path={process.env.PUBLIC_URL + '/'} >
     <div>
       <Route exact path="/" component={App} />
-      <Route exact path="/signup" component={Signup} />
+      <Route exact path="/call" component={Signup} />
     </div>
   </HashRouter>
 )
