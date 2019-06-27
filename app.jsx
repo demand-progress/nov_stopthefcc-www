@@ -21,7 +21,7 @@ import Signup from './containers/Signup.jsx'
 })()
 
 const routing = (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <div>
       <Route exact path="/" component={App} />
       <Route exact path="/signup" component={Signup} />
