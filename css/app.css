@@ -1067,7 +1067,8 @@ div.modal-thanks-text p:nth-of-type(3) a{
 	font-size: 32px;
     line-height: 1.1em;
     margin-bottom: 24px;
-    color: #3C3736 !important;
+	color: #3C3736 !important;
+	font-family: "Open Sans Condensed";
 }
 
 .sign-up-page .unit {
