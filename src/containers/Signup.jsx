@@ -29,7 +29,7 @@ class Signup extends Component {
                         <div id="congress-alert">
                             <div>
                                 
-                                <p>There’s still more you can do — please call Congress and tell your lawmakers to restore net neutrality.</p>
+                                <p>There’s still more you can do — senators need to hear from their constituents that you want them to cosponsor net neutrality legislation and demand Mitch McConnell allow a vote.</p>
 								<h4>
 									Call Now: <br />
 									858-264-0403
